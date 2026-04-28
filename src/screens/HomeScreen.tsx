@@ -26,9 +26,21 @@ const data = [
     { id: 5, name: 'Wheat', stock: 19, unit: 'kg' },
 ]
 
+interface stockItemProps {
+    id: number
+    name: string
+    stock: number
+    unit: string
+}
+
 const HomeScreen = () => {
 
     const [view, setView] = useState(1)
+    const [stockData, setStockData] = useState(data)
+
+    const handleAddItem = (newItem: stockItemProps) => {
+        setStockData([...stockData, newItem])
+    }
 
     return (
         <View style={styles.container}>
@@ -52,9 +64,9 @@ const HomeScreen = () => {
                 ))}
             </View>
 
-            {view === 1 && <AllItems data={data} />}
-            {view === 2 && <AllItems data={data.filter((item) => item.stock < 20)} />}
-            {view === 3 && <CreateScreen />}
+            {view === 1 && <AllItems data={stockData} />}
+            {view === 2 && <AllItems data={stockData.filter((item) => item.stock < 20)} />}
+            {view === 3 && <CreateScreen onAddItem={handleAddItem} />}
         </View>
     )
 }
