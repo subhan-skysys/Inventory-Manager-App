@@ -1,4 +1,22 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Inventory Manager
+
+A cross-platform mobile inventory management application built with [**React Native**](https://reactnative.dev). This app helps you track stock levels, manage inventory items, and monitor low stock alerts efficiently across iOS and Android.
+
+## Features
+
+- **Dashboard**: View overview of your inventory
+- **All Items**: Browse and manage all inventory items with their current stock levels
+- **Low Stock Alert**: Quickly identify items that are running low on stock
+- **Create Items**: Add new items to your inventory with quantity and unit specifications
+- **Cross-Platform**: Runs seamlessly on both iOS and Android devices
+
+## Tech Stack
+
+- React Native 0.84.1
+- TypeScript
+- React 19.2.3
+- React Native Safe Area Context
+- Metro bundler
 
 # Getting Started
 
@@ -73,14 +91,33 @@ When you want to forcefully reload, for example to reset the state of your app, 
 - **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
 - **iOS**: Press <kbd>R</kbd> in iOS Simulator.
 
+## Project Structure
+
+```
+src/
+├── screens/
+│   ├── HomeScreen.tsx      # Main dashboard with navigation
+│   ├── AllItems.tsx        # View all inventory items
+│   ├── CreateScreen.tsx    # Add new items to inventory
+│   └── LowStock.tsx        # View items with low stock
+```
+
 ## Congratulations! :tada:
 
-You've successfully run and modified your React Native App. :partying_face:
+You've successfully set up the Inventory Manager app. :partying_face:
 
-### Now what?
+### Next Steps
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+- Explore the **HomeScreen** to navigate between different views
+- Add items to your inventory using the **Create** functionality
+- Monitor your stock levels and get alerts for low stock items
+- Extend the app with database integration for persistent storage
+- Customize the UI to match your brand
+
+### To Learn More
+
+- [React Native Documentation](https://reactnative.dev/docs/getting-started)
+- [TypeScript with React Native](https://reactnative.dev/docs/typescript)
 
 # Troubleshooting
 
